@@ -30,21 +30,26 @@ We don't know:
 ## Project structure
 
 ```
-├── OPAL_HARNESS_SPEC_v0.2.0.md    ← Design document (the why)
-├── harness.md                      ← Operating protocol (the what — this is what the agent reads)
-├── OPAL_TEST_SUITE_REQUIREMENTS.md ← Evaluation framework
-├── TASK_WRITER_PROMPT.md           ← Prompt used to generate test tasks
+├── INTENT.md                           ← Design philosophy (why from the LLM's perspective)
+├── spec/
+│   ├── OPAL_HARNESS_SPEC_v0.2.0.md    ← Design document (the why)
+│   ├── harness.md                      ← Operating protocol (the what — agent reads this)
+│   └── OPAL_TEST_SUITE_REQUIREMENTS.md ← Evaluation framework
+├── docs/
+│   ├── NEXT_STEPS.md                   ← Phased execution plan
+│   ├── project_state.md                ← Current state snapshot
+│   └── TASK_WRITER_PROMPT.md           ← Prompt used to generate test tasks
 └── opal-test/
-    ├── tasks/                      ← 50 test tasks across 6 types and 3 difficulty tiers
+    ├── tasks/                          ← 50 test tasks across 6 types and 3 tiers
     │   ├── bugfix/    (15)
     │   ├── feature/   (10)
     │   ├── refactor/   (8)
     │   ├── config/     (7)
     │   ├── document/   (5)
     │   └── data/       (5)
-    ├── runner/                     ← Test runner scripts (stubs)
-    ├── results/                    ← Where test results go
-    └── analysis/                   ← Comparison and audit tools (stubs)
+    ├── runner/                         ← Test runner scripts (stubs)
+    ├── results/                        ← Where test results go
+    └── analysis/                       ← Comparison and audit tools (stubs)
 ```
 
 ## The workspace
