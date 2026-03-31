@@ -1,0 +1,9 @@
+{
+  "id": "bugfix-11-path-traversal",
+  "type": "bugfix",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair"],
+  "estimated_cycles": 4,
+  "notes": "Agent may try simple string filtering (blocking '..') but needs to handle URL-encoded variants and symlinks."
+}

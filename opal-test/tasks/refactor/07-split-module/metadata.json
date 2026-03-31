@@ -1,0 +1,9 @@
+{
+  "id": "refactor-07-split-module",
+  "type": "refactor",
+  "tier": 3,
+  "source": "synthetic",
+  "expected_mechanisms": ["dead-ends", "replan", "multi-file"],
+  "estimated_cycles": 8,
+  "notes": "Split a large monolithic module into cohesive sub-modules. Agent must maintain all cross-references and public API."
+}

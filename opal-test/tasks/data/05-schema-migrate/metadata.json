@@ -1,0 +1,9 @@
+{
+  "id": "data-05-schema-migrate",
+  "type": "data",
+  "tier": 3,
+  "source": "synthetic",
+  "expected_mechanisms": ["replan", "checkpoint", "mid-check"],
+  "estimated_cycles": 8,
+  "notes": "Migrate data between incompatible schema versions. Agent must handle column renames, type changes, and data transformations."
+}

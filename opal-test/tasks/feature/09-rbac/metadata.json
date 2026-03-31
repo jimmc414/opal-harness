@@ -1,0 +1,9 @@
+{
+  "id": "feature-09-rbac",
+  "type": "feature",
+  "tier": 3,
+  "source": "synthetic",
+  "expected_mechanisms": ["dead-ends", "replan", "checkpoint", "pause", "multi-file"],
+  "estimated_cycles": 10,
+  "notes": "RBAC across multiple files. Agent may implement auth middleware but forget per-endpoint role checks, or miss the admin-only delete constraint."
+}

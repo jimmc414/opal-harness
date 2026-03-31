@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  webapp:
+    build: ./web
+    ports:
+      - "8080:80"
+    environment:
+      - API_URL=http://backend:5000
+
+  backend:
+    build: ./api
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=postgres://database:5432/myapp
+
+  database:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=myapp
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass

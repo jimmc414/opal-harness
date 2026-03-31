@@ -1,0 +1,9 @@
+{
+  "id": "feature-10-db-migrations",
+  "type": "feature",
+  "tier": 3,
+  "source": "synthetic",
+  "expected_mechanisms": ["replan", "checkpoint", "mid-check", "multi-file"],
+  "estimated_cycles": 10,
+  "notes": "Add migration system to existing raw-SQL project. Agent must track applied migrations, handle ordering, and support rollback."
+}

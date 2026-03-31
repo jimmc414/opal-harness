@@ -1,0 +1,9 @@
+{
+  "id": "document-03-adr",
+  "type": "document",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair"],
+  "estimated_cycles": 4,
+  "notes": "Write architecture decision record for existing system. Agent must analyze code to document decisions."
+}

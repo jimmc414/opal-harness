@@ -1,0 +1,9 @@
+{
+  "id": "config-01-https-redirect",
+  "type": "config",
+  "tier": 1,
+  "source": "synthetic",
+  "expected_mechanisms": ["direct-solve"],
+  "estimated_cycles": 2,
+  "notes": "Fix nginx config to redirect HTTP to HTTPS. Straightforward config change."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "feature-07-audit-log",
+  "type": "feature",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair", "multi-file"],
+  "estimated_cycles": 5,
+  "notes": "Audit logging for all write operations. Multi-file: new audit module + route modifications. Negative test: reads must NOT be logged."
+}

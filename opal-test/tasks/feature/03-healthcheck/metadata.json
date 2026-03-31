@@ -1,0 +1,9 @@
+{
+  "id": "feature-03-healthcheck",
+  "type": "feature",
+  "tier": 1,
+  "source": "synthetic",
+  "expected_mechanisms": ["direct-solve"],
+  "estimated_cycles": 2,
+  "notes": "Add /health endpoint to existing Flask API."
+}

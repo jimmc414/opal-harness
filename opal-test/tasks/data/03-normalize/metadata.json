@@ -1,0 +1,9 @@
+{
+  "id": "data-03-normalize",
+  "type": "data",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair", "dead-ends"],
+  "estimated_cycles": 4,
+  "notes": "Normalize denormalized DB data preserving all records. Agent may lose data on edge cases."
+}

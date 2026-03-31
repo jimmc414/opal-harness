@@ -1,0 +1,11 @@
+{
+  "id": "bugfix-03-null-handling",
+  "type": "bugfix",
+  "tier": 1,
+  "source": "synthetic",
+  "expected_mechanisms": [
+    "direct-solve"
+  ],
+  "estimated_cycles": 2,
+  "notes": "Agent may use empty string instead of null \u2014 eval.sh checks for JSON null specifically."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "document-05-migration-guide",
+  "type": "document",
+  "tier": 3,
+  "source": "synthetic",
+  "expected_mechanisms": ["pause", "dead-ends"],
+  "estimated_cycles": 8,
+  "notes": "Write migration guide for breaking API v1->v2 changes. Agent must analyze both API versions to document differences."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "config-07-multi-stage-docker",
+  "type": "config",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair"],
+  "estimated_cycles": 4,
+  "notes": "Optimize Dockerfile with multi-stage build, layer caching, and minimal final image. Agent must understand Docker build optimization."
+}

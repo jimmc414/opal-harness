@@ -1,0 +1,11 @@
+{
+  "id": "bugfix-04-import-cycle",
+  "type": "bugfix",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": [
+    "repair"
+  ],
+  "estimated_cycles": 4,
+  "notes": "Multiple valid solutions (TYPE_CHECKING, lazy import, restructure). Agent may try one approach that breaks tests before finding the right one."
+}

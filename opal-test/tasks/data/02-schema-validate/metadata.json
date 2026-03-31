@@ -1,0 +1,9 @@
+{
+  "id": "data-02-schema-validate",
+  "type": "data",
+  "tier": 1,
+  "source": "synthetic",
+  "expected_mechanisms": ["direct-solve"],
+  "estimated_cycles": 2,
+  "notes": "Add JSON schema validation to data ingest pipeline."
+}

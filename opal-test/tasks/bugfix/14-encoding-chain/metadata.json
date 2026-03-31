@@ -1,0 +1,9 @@
+{
+  "id": "bugfix-14-encoding-chain",
+  "type": "bugfix",
+  "tier": 3,
+  "source": "synthetic",
+  "expected_mechanisms": ["dead-ends", "replan", "checkpoint", "mid-check"],
+  "estimated_cycles": 10,
+  "notes": "3-stage pipeline with independent encoding bugs that compound. Fixing one stage reveals failures in the next."
+}

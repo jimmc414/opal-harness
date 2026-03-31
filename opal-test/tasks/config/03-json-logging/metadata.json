@@ -1,0 +1,9 @@
+{
+  "id": "config-03-json-logging",
+  "type": "config",
+  "tier": 1,
+  "source": "synthetic",
+  "expected_mechanisms": ["direct-solve"],
+  "estimated_cycles": 2,
+  "notes": "Set up structured JSON logging. Replace plain text log output with JSON format."
+}

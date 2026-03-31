@@ -1,0 +1,9 @@
+{
+  "id": "feature-04-rate-limit",
+  "type": "feature",
+  "tier": 1,
+  "source": "synthetic",
+  "expected_mechanisms": ["direct-solve"],
+  "estimated_cycles": 2,
+  "notes": "Add in-memory rate limiting to Flask app. 5 requests/minute per IP."
+}

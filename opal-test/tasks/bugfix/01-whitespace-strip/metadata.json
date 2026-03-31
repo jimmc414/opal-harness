@@ -1,0 +1,11 @@
+{
+  "id": "bugfix-01-whitespace-strip",
+  "type": "bugfix",
+  "tier": 1,
+  "source": "synthetic",
+  "expected_mechanisms": [
+    "direct-solve"
+  ],
+  "estimated_cycles": 2,
+  "notes": "Straightforward fix. Agent should identify whitespace in dict keys from test output."
+}

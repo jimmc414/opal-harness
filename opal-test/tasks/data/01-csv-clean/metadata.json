@@ -1,0 +1,9 @@
+{
+  "id": "data-01-csv-clean",
+  "type": "data",
+  "tier": 1,
+  "source": "synthetic",
+  "expected_mechanisms": ["direct-solve"],
+  "estimated_cycles": 2,
+  "notes": "Clean and validate messy CSV with bad dates, mixed types, missing values."
+}

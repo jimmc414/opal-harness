@@ -1,0 +1,9 @@
+{
+  "id": "refactor-05-raw-to-orm",
+  "type": "refactor",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair", "dead-ends"],
+  "estimated_cycles": 4,
+  "notes": "Replace raw SQL strings with ORM-style model queries. Agent may break edge cases or miss query patterns."
+}

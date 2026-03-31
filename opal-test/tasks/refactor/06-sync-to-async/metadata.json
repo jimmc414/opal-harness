@@ -1,0 +1,9 @@
+{
+  "id": "refactor-06-sync-to-async",
+  "type": "refactor",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair"],
+  "estimated_cycles": 4,
+  "notes": "Convert synchronous HTTP client to async. Agent may miss error handling paths or break the interface."
+}

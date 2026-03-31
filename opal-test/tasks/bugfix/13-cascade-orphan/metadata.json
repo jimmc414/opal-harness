@@ -1,0 +1,9 @@
+{
+  "id": "bugfix-13-cascade-orphan",
+  "type": "bugfix",
+  "tier": 3,
+  "source": "synthetic",
+  "expected_mechanisms": ["dead-ends", "replan", "checkpoint", "multi-file"],
+  "estimated_cycles": 10,
+  "notes": "Fixing employee cascade alone leaves assignment tests failing. Agent must fix both employees AND assignments, collecting employee IDs before deleting them."
+}

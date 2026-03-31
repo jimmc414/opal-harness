@@ -1,0 +1,9 @@
+{
+  "id": "feature-02-csv-export",
+  "type": "feature",
+  "tier": 1,
+  "source": "synthetic",
+  "expected_mechanisms": ["direct-solve"],
+  "estimated_cycles": 2,
+  "notes": "Add format_csv() to existing reporting module alongside format_text and format_json."
+}

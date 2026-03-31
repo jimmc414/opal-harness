@@ -1,0 +1,12 @@
+{
+  "id": "bugfix-08-regex-backtrack",
+  "type": "bugfix",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": [
+    "repair",
+    "dead-ends"
+  ],
+  "estimated_cycles": 5,
+  "notes": "First attempt often tweaks the regex minimally without fixing the backtracking root cause. May need to abandon regex approach entirely for a parser-based approach."
+}

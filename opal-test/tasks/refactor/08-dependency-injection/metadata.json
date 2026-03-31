@@ -1,0 +1,9 @@
+{
+  "id": "refactor-08-dependency-injection",
+  "type": "refactor",
+  "tier": 3,
+  "source": "synthetic",
+  "expected_mechanisms": ["replan", "multi-file"],
+  "estimated_cycles": 8,
+  "notes": "Replace global singletons with constructor-injected dependencies. Agent must thread dependencies through the call chain."
+}

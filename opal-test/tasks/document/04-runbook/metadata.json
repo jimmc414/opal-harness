@@ -1,0 +1,9 @@
+{
+  "id": "document-04-runbook",
+  "type": "document",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair", "multi-file"],
+  "estimated_cycles": 5,
+  "notes": "Write incident response runbook from deploy scripts. Agent must analyze scripts to document procedures."
+}

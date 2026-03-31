@@ -1,0 +1,9 @@
+{
+  "id": "feature-08-retry-backoff",
+  "type": "feature",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair"],
+  "estimated_cycles": 4,
+  "notes": "Agent must distinguish 5xx (retry) from 4xx (no retry) and implement proper backoff."
+}

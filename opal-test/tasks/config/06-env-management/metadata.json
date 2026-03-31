@@ -1,0 +1,9 @@
+{
+  "id": "config-06-env-management",
+  "type": "config",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair"],
+  "estimated_cycles": 4,
+  "notes": "Set up environment-specific config (dev/staging/prod). Agent must create config hierarchy and loader."
+}

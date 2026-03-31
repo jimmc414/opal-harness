@@ -1,0 +1,9 @@
+{
+  "id": "refactor-02-rename-module",
+  "type": "refactor",
+  "tier": 1,
+  "source": "synthetic",
+  "expected_mechanisms": ["direct-solve"],
+  "estimated_cycles": 2,
+  "notes": "Rename module and update all import references. Agent must find all imports across files."
+}

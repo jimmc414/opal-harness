@@ -1,0 +1,9 @@
+{
+  "id": "feature-05-cursor-pagination",
+  "type": "feature",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair"],
+  "estimated_cycles": 4,
+  "notes": "Replace offset pagination with cursor-based. Agent may get cursor encoding wrong or break edge cases."
+}

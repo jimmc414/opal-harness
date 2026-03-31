@@ -1,0 +1,9 @@
+{
+  "id": "feature-06-webhook",
+  "type": "feature",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair", "multi-file"],
+  "estimated_cycles": 5,
+  "notes": "Webhook registration + notification dispatch on order status change. Multi-file: new webhook storage, routes, service integration."
+}

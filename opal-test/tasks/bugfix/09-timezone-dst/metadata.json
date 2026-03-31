@@ -1,0 +1,9 @@
+{
+  "id": "bugfix-09-timezone-dst",
+  "type": "bugfix",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair", "donesh-bug"],
+  "estimated_cycles": 5,
+  "notes": "Agent's done.sh will likely test in UTC, missing the DST edge case. eval.sh tests with TZ=America/New_York."
+}

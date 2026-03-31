@@ -1,0 +1,9 @@
+{
+  "id": "data-04-etl-fix",
+  "type": "data",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair", "donesh-bug"],
+  "estimated_cycles": 4,
+  "notes": "Fix ETL pipeline that silently drops records on type mismatch. The donesh-bug mechanism means the fix might appear complete but miss edge cases."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "config-05-ci-pipeline",
+  "type": "config",
+  "tier": 1,
+  "source": "synthetic",
+  "expected_mechanisms": ["direct-solve"],
+  "estimated_cycles": 2,
+  "notes": "Fix broken GitHub Actions CI. Multiple issues in the workflow YAML."
+}

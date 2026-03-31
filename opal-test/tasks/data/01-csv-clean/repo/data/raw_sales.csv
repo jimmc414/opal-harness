@@ -1,0 +1,9 @@
+id,date,amount,customer,region
+1,2024-01-15,99.99,Alice,North
+2,15/01/2024,50.00,Bob,South
+3,2024-02-01,,Carol,East
+4,Jan 20 2024,75.50,Dave,West
+5,2024-03-10,invalid,Eve,North
+6,2024-04-01,120.00,,South
+7,,85.00,Grace,East
+8,2024-05-15,45.00,Hank,

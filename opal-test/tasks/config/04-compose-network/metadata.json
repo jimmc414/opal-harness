@@ -1,0 +1,9 @@
+{
+  "id": "config-04-compose-network",
+  "type": "config",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair", "multi-file"],
+  "estimated_cycles": 5,
+  "notes": "Fix Docker Compose networking between services. Multiple config files need coordinated changes."
+}

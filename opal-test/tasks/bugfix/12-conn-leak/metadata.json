@@ -1,0 +1,9 @@
+{
+  "id": "bugfix-12-conn-leak",
+  "type": "bugfix",
+  "tier": 2,
+  "source": "synthetic",
+  "expected_mechanisms": ["repair"],
+  "estimated_cycles": 4,
+  "notes": "Agent may fix execute_query but miss execute_many, or miss the double-fault case."
+}
