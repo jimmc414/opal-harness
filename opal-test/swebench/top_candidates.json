@@ -1,0 +1,22 @@
+[
+  "astropy__astropy-14365",
+  "astropy__astropy-6938",
+  "pylint-dev__pylint-5859",
+  "pylint-dev__pylint-6506",
+  "sphinx-doc__sphinx-8506",
+  "sympy__sympy-12171",
+  "sympy__sympy-13031",
+  "sympy__sympy-15678",
+  "sympy__sympy-17655",
+  "sympy__sympy-18621",
+  "sympy__sympy-21847",
+  "sympy__sympy-22005",
+  "sympy__sympy-24152",
+  "astropy__astropy-12907",
+  "astropy__astropy-14995",
+  "mwaskom__seaborn-2848",
+  "pallets__flask-4992",
+  "psf__requests-3362",
+  "pytest-dev__pytest-5413",
+  "pytest-dev__pytest-6116"
+]

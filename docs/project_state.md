@@ -1,8 +1,10 @@
 # OPAL Project State
 
-**Date:** 2026-03-30
+> **Context for new sessions:** OPAL is an LLM-designed agent harness — a structured workspace and operating protocol for coding agents, designed from the LLM's perspective rather than imposed on it. The spec (v0.2.0) and test suite (50 synthetic + 5 SWE-bench tasks) are complete, developed through adversarial review between two Claude Opus 4.6 instances. Phase 1 (synthetic) and Phase 2 (SWE-bench) have been run. Key finding: agents DO follow the protocol (95-100% artifact adherence), but all tasks were too easy — Opus solved them bare. Phase 3 needs harder tasks with graded (not binary) evaluation to find where OPAL's structured approach actually helps.
+
+**Date:** 2026-04-01
 **Repo:** https://github.com/jimmc414/opal-harness
-**Status:** Spec complete, test suite complete, zero tasks run
+**Status:** Phase 1 + 2 complete. Bare 10/10, OPAL 9/10 (one rate-limit failure). Need harder tasks.
 
 ---
 
@@ -57,6 +59,8 @@ Changes from v0.1.0 to v0.2.0:
 | data | 5 | Tests schema validation, data integrity |
 
 **Tier distribution:** 21 Tier 1 / 21 Tier 2 / 8 Tier 3
+
+**Note on tier counts:** The original manifest targeted 20/20/10 (40%/40%/20%). The current distribution (21/21/8) shifted during batch reviews — notably bugfix-07 was re-tiered from Tier 2 to Tier 1. These counts reflect the post-review state. The metadata.json files in each task directory are the source of truth for individual task tiers — verify they match these aggregates before running tests.
 
 **Mechanism coverage (all minimums met):**
 
@@ -125,7 +129,7 @@ compare.py and audit_donesh.py need to:
 
 ### document/02-changelog git history
 
-The changelog task requires git history to generate a changelog from. The embedded .git directory was removed during repo creation. The runner will need to reinitialize the git history from a setup script, or the task needs a git-bundle/tarball alternative.
+The changelog task requires git history to generate a changelog from. The embedded .git directory was removed during repo creation. The runner will need to reinitialize the git history from a setup script, or the task needs a git-bundle/tarball alternative. **This must be resolved before testing — a task without its required input data is broken.**
 
 ---
 
@@ -133,11 +137,11 @@ The changelog task requires git history to generate a changelog from. The embedd
 
 ### Will agents actually follow the protocol?
 
-The harness.md is instructions, not enforcement. An agent could read it and ignore it entirely. The OPAL condition's value depends on the agent internalizing and following the phase logic, state-file discipline, and completion gate. If agents treat harness.md as background noise, the entire approach fails.
+The harness.md is instructions, not enforcement. An agent could read it and ignore it entirely. The OPAL condition's value depends on the agent internalizing and following the phase logic, state-file discipline, and completion gate. If agents treat harness.md as background noise, the entire approach fails. **This is the first thing Phase 1 manual validation must answer. If the answer is no, do not proceed to automated testing — go back to harness.md and figure out why.**
 
 ### Is done.sh quality good enough?
 
-The spec's central claim is that deterministic completion gates are better than LLM judgment. But the LLM writes the gate. The comment-mapping requirement makes gaps visible, and the test suite includes donesh-bug tasks to probe this, but we don't know yet whether agents write meaningful checks or trivial ones.
+The spec's central claim is that deterministic completion gates are better than LLM judgment. But the LLM writes the gate. The comment-mapping requirement makes gaps visible, and the test suite includes donesh-bug tasks to probe this, but we don't know yet whether agents write meaningful checks or trivial ones. **For every DONE outcome in testing, manually inspect done.sh. If the agent writes trivial checks (exit 0), the central design claim fails.**
 
 ### Does the overhead hurt Tier 1 tasks?
 
@@ -157,28 +161,28 @@ harness.md is ~170 lines consumed on first read. State/plan/log reads add more o
 
 ### How the spec was developed
 
-1. Jim provided the initial v0.1.0 spec to Claude Code Opus for review
-2. Claude Code provided feedback (10 points). Claude.ai Opus reviewed the feedback, accepted 7, pushed back on 3 with reasoning.
-3. Claude Code conceded where the author's argument was stronger, pushed back where warranted
-4. 5 agreed changes were identified. Claude Code flagged 2 additional specification gaps (PAUSE state undefined, harness.md loading convention unspecified)
-5. Author accepted both gaps, produced v0.2.0 incorporating all changes
-6. Claude Code identified the done.sh comment requirement — the single most impactful suggestion in the exchange
+1. Claude.ai Opus designed the initial spec (v0.1.0) based on the prompt: "What would be the most intuitive harness design from your perspective?"
+2. Jim provided the v0.1.0 spec to Claude Code Opus for review
+3. Claude Code provided feedback (10 points). Claude.ai Opus reviewed the feedback, accepted 7, pushed back on 3 with reasoning.
+4. Claude Code conceded where the author's argument was stronger, pushed back where warranted
+5. 5 agreed changes were identified. Claude Code flagged 2 additional specification gaps (PAUSE state undefined, harness.md loading convention unspecified)
+6. Claude.ai accepted both gaps, produced v0.2.0 incorporating all changes
+7. Claude Code identified the done.sh comment requirement — the single most impactful suggestion in the exchange
 
 ### How the test suite was built
 
-1. Claude Code wrote requirements for harness.md content and task suite composition
-2. Author agreed and produced both documents
-3. A separate clean Claude Code instance (no knowledge of harness design) built the tasks from the test suite requirements only
-4. Claude Code reviewed each batch (5 batches), producing specific feedback
-5. Clean instance applied fixes, Claude Code verified
-6. Final structural verification confirmed all 50 tasks pass all checks
+1. Claude.ai wrote the test suite requirements and the task writer prompt
+2. A separate clean Claude Code instance (no knowledge of harness design) built the tasks from the test suite requirements only
+3. Claude Code (OPAL-aware) reviewed each batch (5 batches), producing specific feedback
+4. Clean instance applied fixes, Claude Code verified
+5. Final structural verification confirmed all 50 tasks pass all checks
 
 ### What the "creative tension" process revealed
 
 Same model weights in different contexts produced genuine disagreements:
-- ORIENT counting against cycle budget (author right, Claude Code wrong)
-- Error taxonomy (author right to cut it — existing flow handles implicitly)
-- Plan-mutation trigger specificity (author right — overspecifying a judgment call adds false rigor)
+- ORIENT counting against cycle budget (Claude.ai right, Claude Code wrong)
+- Error taxonomy (Claude.ai right to cut it — existing flow handles implicitly)
+- Plan-mutation trigger specificity (Claude.ai right — overspecifying a judgment call adds false rigor)
 - done.sh comment requirement (Claude Code right — structural prevention > detection)
 - PAUSE as distinct from STUCK (Claude Code right — different semantics)
 

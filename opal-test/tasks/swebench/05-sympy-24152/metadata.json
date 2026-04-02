@@ -1,0 +1,16 @@
+{
+  "id": "swebench-05-sympy-24152",
+  "type": "swebench",
+  "tier": 3,
+  "source": "swe-bench-lite",
+  "source_instance": "sympy__sympy-24152",
+  "source_repo": "sympy/sympy",
+  "source_commit": "b9af885473ad7e34b5b0826cb424dd26d8934670",
+  "expected_mechanisms": [
+    "dead-ends",
+    "replan",
+    "exploration"
+  ],
+  "estimated_cycles": 12,
+  "notes": "Real GitHub issue from sympy/sympy. Large codebase navigation required."
+}
